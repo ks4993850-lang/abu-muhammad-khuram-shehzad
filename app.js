@@ -33,7 +33,7 @@ const HADITH_DATA = [
     arabic: "إِنَّ هَذَا الْعِلْمَ دِينٌ، فَانْظُرُوا عَمَّنْ تَأْخُذُونَ دِينَكُمْ",
     urdu: "بے شک یہ علمِ حدیث تمہارا دین ہے، پس خوب تحقیق کر لو کہ تم اپنا دین کن لوگوں سے حاصل کر رہے ہو۔",
     english: "Indeed, this sacred knowledge is religion itself; therefore scrutinize carefully from whom you take your religion.",
-    tahqiqNote: "Analytical Commentary (Al-Mizan Al-Hadith): Establishes the epistemological necessity of Isnad verification (Ilm al-Rijal) against unverified narrations.",
+    tahqiqNote: "Analytical Commentary (Abu Muhammad Khuram Shehzad): Establishes the epistemological necessity of Isnad verification (Ilm al-Rijal) against unverified narrations.",
     isnad: [
       { name: "Muhammad ibn Sirin", rank: "Imam Tabi'i Kabir" },
       { name: "Hisham ibn Hassan", rank: "Thiqah Thabt" },
@@ -50,7 +50,7 @@ const HADITH_DATA = [
     arabic: "نَضَّرَ اللَّهُ امْرَأً سَمِعَ مِنَّا حَدِيثًا فَحَفِظَهُ حَتَّى يُبَلِّغَهُ غَيْرَهُ، فَرُبَّ حَامِلِ فِقْهٍ إِلَى مَنْ هُوَ أَفْقَهُ مِنْهُ",
     urdu: "اللہ اس شخص کو تروتازہ اور شاداب رکھے جس نے ہم سے کوئی حدیث سنی، اسے یاد رکھا یہاں تک کہ دوسرے تک پہنچا دیا۔",
     english: "May Allah illuminate the person who hears a Hadith from us, memorizes it with precision, and transmits it accurately to others.",
-    tahqiqNote: "Classified as Mutawatir Ma'nawi (transmitted via over 20 Companions). Forms the charter of the Al-Mizan Al-Hadith Research Center.",
+    tahqiqNote: "Classified as Mutawatir Ma'nawi (transmitted via over 20 Companions). Core scholarly foundation of Researcher Abu Muhammad Khuram Shehzad's Hadith works.",
     isnad: [
       { name: "Prophet Muhammad ﷺ", rank: "Masdar al-Wahy" },
       { name: "Zayd ibn Thabit / Ibn Mas'ud", rank: "Sahabi" },
@@ -105,7 +105,7 @@ const UI_TRANSLATIONS = {
     navManuscripts: "Journal & Contact",
     heroEyebrow: "GLOBAL CENTER FOR PROPHETIC TRADITION & CRITICAL TAHQIQ",
     heroTitle: "Weighing Sacred Heritage on the <span>Scale of Authentic Proof</span>",
-    heroDesc: "Welcome to Al-Mizan Al-Hadith (المیزان الحدیث) — an international Islamic research sanctuary dedicated to epistemological rigor in Hadith sciences, Isnad verification, and free global access to all 37+ PDF books and monographs of Researcher Abu Muhammad Khurram Shahzad.",
+    heroDesc: "Welcome to the official scholarly portal of Abu Muhammad Khuram Shehzad (أبو محمد خرم شہزاد) — dedicated to epistemological rigor in Hadith sciences, Isnad verification, and free global access to all 37+ PDF books and monographs.",
     ctaExploreBooks: "Browse & Download All 37 PDF Books (Free)",
     ctaWorkbench: "Launch Hadith Verification Workbench"
   },
@@ -118,7 +118,7 @@ const UI_TRANSLATIONS = {
     navManuscripts: "مقالات و رابطہ",
     heroEyebrow: "علومِ نبوت، تحقیقِ اسانید اور احیائے تراث کا عالمی علمی مرکز",
     heroTitle: "میزانِ عدل و برہان پر <span>سنتِ نبویہ ﷺ کی مستند تحقیق</span>",
-    heroDesc: "مرکز ’’المیزان الحدیث‘‘ میں خوش آمدید — یہ عالمی تحقیقی ادارہ علومِ حدیث، جرح و تعدیل، عللِ خفیہ کی تحقیق اور محقق ابو محمد خرم شہزاد حفظہ اللہ کی 37 سے زائد علمی و تحقیقی تصانیف (PDF) کے مفت مطالعہ اور ڈاؤن لوڈ کے لیے وقف ہے۔",
+    heroDesc: "محقق ابو محمد خرم شہزاد حفظہ اللہ کے آفیشل علمی پورٹل میں خوش آمدید — یہ ویب سائٹ علومِ حدیث، جرح و تعدیل، عللِ خفیہ کی تحقیق اور آپ کی 37 سے زائد علمی و تحقیقی تصانیف (PDF) کے مفت مطالعہ اور ڈاؤن لوڈ کے لیے وقف ہے۔",
     ctaExploreBooks: "تمام 37 کتب (PDF) مفت ڈاؤن لوڈ کریں",
     ctaWorkbench: "جدید انجن برائے تحقیقِ حدیث"
   },
@@ -131,7 +131,7 @@ const UI_TRANSLATIONS = {
     navManuscripts: "الأبحاث والتواصل",
     heroEyebrow: "المركز العالمي لعلوم السنة النبوية والتحقيق العلمي الرصين",
     heroTitle: "تحقيق التراث النبوي الشريف على <span>ميزان البرهان والإسناد</span>",
-    heroDesc: "مرحباً بكم في مركز «الميزان الحديث» للبحوث والدراسات الإسلامية — صرح علمي عالمي يُعنى بتحقيق المتون ودراسة الأسانيد ونشر كافة مؤلفات الباحث المحقق أبي محمد خرم شهزاد بصيغة PDF مجاناً.",
+    heroDesc: "مرحباً بكم في الموقع الرسمي للباحث المحقق أبي محمد خرم شهزاد — صرح علمي يُعنى بعلوم الحديث الشريف ودراسة الأسانيد ونشر كافة مؤلفاته وتصانيفه بصيغة PDF مجاناً.",
     ctaExploreBooks: "تصفح وحمّل جميع المؤلفات (37 كتاباً PDF)",
     ctaWorkbench: "بوابة التحقيق ودراسة الأسانيد"
   }
@@ -174,7 +174,7 @@ function initHijriDate() {
     });
     badge.textContent = formatter.format(new Date());
   } catch (e) {
-    badge.textContent = "1448 AH • Al-Mizan Research Observatory";
+    badge.textContent = "1448 AH • Abu Muhammad Khuram Shehzad Observatory";
   }
 }
 
@@ -273,7 +273,7 @@ window.openPdfPreviewModal = function (bookId) {
   content.innerHTML = `
     <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem; margin-bottom:1rem; padding-right:2.5rem;">
       <div>
-        <div class="section-tag" style="margin-bottom:0.2rem;">OFFICIAL AL-MIZAN PDF READER • FREE PUBLIC ACCESS</div>
+        <div class="section-tag" style="margin-bottom:0.2rem;">OFFICIAL ABU MUHAMMAD KHURAM SHEHZAD LIBRARY • FREE PUBLIC ACCESS</div>
         <h2 style="font-family:var(--font-urdu); font-size:1.45rem; color:var(--gold-light);" dir="rtl">${book.title}</h2>
         <div style="font-size:0.95rem; color:var(--text-secondary);">${book.englishTitle || ""} — <strong>${book.author}</strong></div>
       </div>
@@ -359,7 +359,7 @@ function renderHadithWorkbench() {
       <p class="hadith-english">“${h.english}”</p>
       
       <div style="background: var(--gold-glow); border-left: 3px solid var(--gold-primary); padding: 0.75rem 1rem; border-radius: 6px; font-size: 0.88rem; color: var(--text-primary); margin-bottom: 1rem;">
-        <strong style="color: var(--gold-primary);">Al-Mizan Tahqiq Note:</strong> ${h.tahqiqNote}
+        <strong style="color: var(--gold-primary);">Scholarly Tahqiq Note:</strong> ${h.tahqiqNote}
       </div>
 
       <div class="isnad-chain-box">
@@ -439,7 +439,7 @@ window.unlockAdminDashboard = function (e) {
   const savedToken = localStorage.getItem("almizan_gh_token") || "";
   const tokenField = document.getElementById("admin-saved-token");
   if (tokenField && savedToken) tokenField.value = savedToken;
-  showToast("🔓 Welcome to Al-Mizan Private Admin Dashboard");
+  showToast("🔓 Welcome to Abu Muhammad Khuram Shehzad Admin Dashboard");
 };
 
 function extractDriveFileId(input) {
