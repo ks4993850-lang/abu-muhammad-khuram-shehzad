@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الميزان الحديث | Al-Mizan Al-Hadith Islamic Research Center & Books of Abu Muhammad Khurram Shahzad</title>
+  <meta name="description" content="Official portal of Al-Mizan Al-Hadith (المیزان الحدیث) Islamic Research Center. Free download of all 37+ PDF books and monographs of Researcher Abu Muhammad Khurram Shahzad, Hadith verification workbench, and Isnad criticism." />
+  
+  <!-- Google Fonts: Amiri (Arabic), Noto Nastaliq Urdu, Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Noto+Nastaliq+Urdu:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css?v=3" />
+</head>
+<body>
+
+  <!-- Top Sacred Bismillah & Hijri Observatory Bar -->
+  <div class="top-sacred-bar">
+    <div class="top-meta-items">
+      <span class="hijri-badge">🌙 <span id="hijri-date-display">1448 AH</span></span>
+      <span>Official Portal • Al-Mizan Al-Hadith Research Sanctuary</span>
+    </div>
+    <div class="bismillah-calligraphy" lang="ar">
+      بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ • وَأَقِيمُوا الْوَزْنَ بِالْقِسْطِ وَلَا تُخْسِرُوا الْمِيزَانَ
+    </div>
+    <div class="top-meta-items">
+      <span>Principal Muhaddith & Researcher: <strong>Abu Muhammad Khurram Shahzad</strong></span>
+    </div>
+  </div>
+
+  <!-- Sticky Navigation Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#top" class="brand-identity">
+        <div class="brand-emblem" aria-label="Al-Mizan Emblem">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2L20 10L28 12L22 18L23.5 26L16 22L8.5 26L10 18L4 12L12 10L16 2Z" stroke="#d4af37" stroke-width="1.6"/>
+            <line x1="16" y1="7" x2="16" y2="25" stroke="#d4af37" stroke-width="1.8"/>
+            <line x1="9" y1="14" x2="23" y2="14" stroke="#d4af37" stroke-width="1.8"/>
+          </svg>
+        </div>
+        <div class="brand-titles">
+          <span class="brand-arabic-title">الميزان الحديث</span>
+          <span class="brand-sub-title">Al-Mizan Al-Hadith Research Center</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#sanctuary" class="nav-btn active" id="nav-home-text">Sanctuary</a></li>
+          <li><a href="#khurram-shahzad-books" class="nav-btn" id="nav-books-text">PDF Books Library (37+)</a></li>
+          <li><a href="#tahqiq-workbench" class="nav-btn" id="nav-tahqiq-text">Hadith Workbench</a></li>
+          <li><a href="#research-pillars" class="nav-btn" id="nav-pillars-text">Research Pillars</a></li>
+          <li><a href="#manuscripts-journal" class="nav-btn" id="nav-manuscripts-text">Journal & Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-switcher" role="group" aria-label="Language Selector">
+          <button class="lang-btn active" data-lang-switch="en">EN</button>
+          <button class="lang-btn" data-lang-switch="ur">اردو</button>
+          <button class="lang-btn" data-lang-switch="ar">عربي</button>
+        </div>
+        <button class="icon-btn" id="theme-toggle-btn" title="Switch Manuscript / Parchment Theme" aria-label="Switch Theme">
+          ☀
+        </button>
+        <button class="icon-btn" onclick="openAdminPortal()" title="Owner Admin Portal (Passcode Required)" aria-label="Owner Admin Portal">
+          🔒
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO SANCTUARY SECTION -->
+    <section class="hero-section" id="sanctuary">
+      <div class="hero-glow"></div>
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-eyebrow">
+              <span>✦</span>
+              <span id="hero-eyebrow-text">GLOBAL CENTER FOR PROPHETIC TRADITION & CRITICAL TAHQIQ</span>
+            </div>
+            
+            <div class="hero-arabic-banner" lang="ar">
+              مَرْكَزُ الْمِيزَانِ الْحَدِيثِ لِلْبُحُوثِ وَالدِّرَاسَاتِ الْإِسْلَامِيَّةِ
+            </div>
+
+            <h1 class="hero-title" id="hero-title-text">
+              Weighing Sacred Heritage on the <span>Scale of Authentic Proof</span>
+            </h1>
+
+            <p class="hero-description" id="hero-desc-text">
+              Welcome to <strong>Al-Mizan Al-Hadith (المیزان الحدیث)</strong> — an international Islamic research sanctuary dedicated to epistemological rigor in Hadith sciences, Isnad verification, and free global access to all <strong>37+ PDF books and monographs</strong> of Researcher <strong>Abu Muhammad Khurram Shahzad</strong>.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#khurram-shahzad-books" class="btn-primary">
+                <span>📚</span>
+                <span id="cta-books-text">Browse & Download All 37 PDF Books (Free)</span>
+              </a>
+              <a href="#tahqiq-workbench" class="btn-secondary">
+                <span>⚖</span>
+                <span id="cta-workbench-text">Launch Hadith Verification Workbench</span>
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat-item">
+                <h4>37+</h4>
+                <p>Free Downloadable PDF Books</p>
+              </div>
+              <div class="stat-item">
+                <h4>6 Volumes</h4>
+                <p>Tahqiq Mishkat al-Masabih</p>
+              </div>
+              <div class="stat-item">
+                <h4>12,400+</h4>
+                <p>Analyzed Asanid & Turuq</p>
+              </div>
+              <div class="stat-item">
+                <h4>100% Free</h4>
+                <p>Open Global Islamic Waqf</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mihrab Classical Illumination Card -->
+          <div class="mihrab-card">
+            <div class="mihrab-ornament">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M12 3v18M5 8l7-5 7 5M4 13l4-5 4 5H4zM12 13l4-5 4 5h-8z"/>
+              </svg>
+            </div>
+            <div class="section-tag">CHARTER OF THE SCALE (AL-MIZAN)</div>
+            <div class="mihrab-arabic-verse" lang="ar">
+              « إِنَّ هَذَا الْعِلْمَ دِينٌ، فَانْظُرُوا عَمَّنْ تَأْخُذُونَ دِينَكُمْ »
+            </div>
+            <p class="mihrab-quote">
+              “Indeed, this sacred knowledge is religion itself; therefore scrutinize carefully from whom you take your religion.”
+            </p>
+            <div style="font-family: var(--font-urdu); font-size: 1rem; color: var(--gold-primary); margin-bottom: 0.75rem;" dir="rtl">
+              ’’بے شک یہ علمِ حدیث تمہارا دین ہے، پس خوب تحقیق کر لو کہ تم اپنا دین کن لوگوں سے حاصل کر رہے ہو۔‘‘
+            </div>
+            <span style="font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">
+              — Imam Muhammad ibn Sirin (d. 110 AH) • Muqaddimah Sahih Muslim
+            </span>
+
+            <div class="mihrab-scholar-badge">
+              <div style="width:46px; height:46px; border-radius:50%; background:var(--gold-glow); border:1px solid var(--gold-primary); display:flex; align-items:center; justify-content:center; font-family:var(--font-arabic); color:var(--gold-primary); font-weight:700; flex-shrink:0;">
+                أبو محمد
+              </div>
+              <div>
+                <div style="font-size:0.88rem; font-weight:700; color:var(--text-primary);">
+                  Abu Muhammad Khurram Shahzad
+                </div>
+                <div style="font-size:0.78rem; color:var(--gold-primary);">
+                  Founder & Principal Researcher • الميزان الحديث
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEDICATED WING: 37+ PDF BOOKS OF RESEARCHER ABU MUHAMMAD KHURRAM SHAHZAD -->
+    <section id="khurram-shahzad-books">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">📚 COMPLETE DIGITAL LIBRARY • FREE PDF DOWNLOADS</span>
+          <h2 class="section-title">Books & Monographs of Abu Muhammad Khurram Shahzad</h2>
+          <p class="section-subtitle">
+            Official open-access repository of <strong>Al-Shaykh Abu Muhammad Khurram Shahzad (الشیخ ابو محمد خرم شہزاد حفظہ اللہ)</strong>. Click any book's front cover to read online immediately or download the complete PDF for free.
+          </p>
+        </div>
+
+        <!-- Researcher Profile Spotlight Banner -->
+        <div class="scholar-spotlight-banner">
+          <div class="scholar-monogram">
+            <span class="scholar-monogram-ar">أبو محمد</span>
+            <span class="scholar-monogram-ar" style="font-size:1.25rem;">خرم شهزاد</span>
+            <span style="font-size:0.68rem; color:var(--text-secondary); margin-top:0.35rem; letter-spacing:0.08em; text-transform:uppercase;">Muhaddith & Author</span>
+          </div>
+
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem;">
+              <div>
+                <span class="section-tag" style="margin-bottom:0.25rem;">PRINCIPAL RESEARCHER & DIRECTOR OF TAHQIQ</span>
+                <h3 style="font-size:2rem; color:var(--text-primary);">
+                  Abu Muhammad Khurram Shahzad <span style="font-family:var(--font-arabic); color:var(--gold-primary); font-size:1.75rem; margin-left:0.5rem;">(الشیخ ابو محمد خرم شہزاد)</span>
+                </h3>
+              </div>
+              <a href="https://drive.google.com/drive/folders/1vm79ATZU22jMNCr7Y9bPJy7cdLV89FC-?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="padding:0.55rem 1rem; font-size:0.82rem;">
+                📂 Open Master Google Drive Archive
+              </a>
+            </div>
+
+            <div class="scholar-meta-tags">
+              <span class="scholar-tag">✦ Usul al-Hadith & Takhrij</span>
+              <span class="scholar-tag">✦ Jarh wa Ta'dil & الدفاع عن الرواة</span>
+              <span class="scholar-tag">✦ 6-Volume Tahqiq Mishkat al-Masabih</span>
+              <span class="scholar-tag">✦ Authentic Fiqh al-Sunnah</span>
+            </div>
+
+            <div style="font-family:var(--font-urdu); font-size:1.08rem; color:var(--gold-light); direction:rtl; text-align:right; border-top:1px solid var(--gold-border); padding-top:0.85rem;">
+              محقق و محدث الشیخ ابو محمد خرم شہزاد حفظہ اللہ کی تمام تحقیقی کتب اور رسائل عوام الناس اور طلبۂ علومِ نبوت کے استفادے کے لیے بالکل مفت (Free PDF) پیش کیے جا رہے ہیں۔ ہر کتاب کے ٹائل پر کلک کر کے آپ براہِ راست ڈاؤن لوڈ یا آن لائن مطالعہ کر سکتے ہیں۔
+            </div>
+          </div>
+        </div>
+
+        <!-- Search & Filter Bar for the 37+ PDF Books -->
+        <div class="workbench-panel" style="padding: 1.5rem; margin-bottom: 2.5rem;">
+          <div class="search-controls-grid" style="margin-bottom: 1rem;">
+            <div class="search-input-wrapper">
+              <span class="search-icon">🔍</span>
+              <input
+                type="text"
+                id="book-search-input"
+                class="search-input"
+                placeholder="Search 37+ books by Urdu or English title (e.g., مشکوٰۃ, رمضان, ضعفاء, Miskaat, Witr, Bukhari, Albani)..."
+              />
+            </div>
+            <div style="display:flex; align-items:center;">
+              <span id="books-total-count" class="hijri-badge" style="padding: 0.65rem 1.1rem; font-size:0.85rem;">
+                Showing 37 of 37 Official PDF Books
+              </span>
+            </div>
+          </div>
+
+          <div class="filter-pills" style="margin-bottom:0;">
+            <button class="pill-btn active" data-book-filter="all">All Books (37)</button>
+            <button class="pill-btn" data-book-filter="mishkat">Tahqiq Mishkat Vol 1–6 (مشکوٰۃ)</button>
+            <button class="pill-btn" data-book-filter="usul">Usul al-Hadith & Takhrij (اصول حدیث)</button>
+            <button class="pill-btn" data-book-filter="tahqiq">Sahih vs. Da'if Tahqiq (تحقیق روایات)</button>
+            <button class="pill-btn" data-book-filter="rijal">Rijal & Du'afa (اسماء الرجال و ضعفاء)</button>
+            <button class="pill-btn" data-book-filter="fiqh">Fiqh & Masail (احکام و مسائل)</button>
+            <button class="pill-btn" data-book-filter="sahabah">Sahabah & Ahl al-Bayt (صحابہ و اہل بیت)</button>
+            <button class="pill-btn" data-book-filter="adhkar">Adhkar & Du'a (حصن المسلم و اذکار)</button>
+          </div>
+        </div>
+
+        <!-- 37+ Real Cover Thumbnail Tiles Grid -->
+        <div id="khurram-books-grid" class="books-tiles-grid">
+          <!-- Populated dynamically by app.js from books.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE HADITH VERIFICATION & ISNAD WORKBENCH -->
+    <section id="tahqiq-workbench">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">⚖ DIGITAL TAHQIQ & RIJAL OBSERVATORY</span>
+          <h2 class="section-title">Al-Mizan Interactive Hadith & Isnad Workbench</h2>
+          <p class="section-subtitle">
+            Inspect graded Prophetic traditions with full Arabic vocalization, Urdu Nastaliq & English translations, critical Tahqiq commentary, and interactive narrator chain (Sanad) verification.
+          </p>
+        </div>
+
+        <div class="workbench-panel">
+          <div class="search-controls-grid">
+            <div class="search-input-wrapper">
+              <span class="search-icon">🔍</span>
+              <input
+                type="text"
+                id="hadith-search-input"
+                class="search-input"
+                placeholder="Search by Arabic text, Urdu (نیت / علم), English keyword, Sahabi, or Hadith source..."
+              />
+            </div>
+            <div style="display:flex; align-items:center;">
+              <span id="hadith-count-badge" class="hijri-badge" style="padding: 0.65rem 1.1rem; font-size:0.85rem;">
+                Showing 5 Verified Research Entries
+              </span>
+            </div>
+          </div>
+
+          <div class="filter-pills">
+            <button class="pill-btn active" data-hadith-filter="all">All Research Entries</button>
+            <button class="pill-btn" data-hadith-filter="usul">Usul & Intentions (الأصول)</button>
+            <button class="pill-btn" data-hadith-filter="jarh">Isnad & Jarh wa Ta'dil (الإسناد)</button>
+            <button class="pill-btn" data-hadith-filter="sunnah">Preservation of Sunnah (حفظ السنة)</button>
+            <button class="pill-btn" data-hadith-filter="akhlaq">Tazkiyah & Heart (التزكية)</button>
+            <button class="pill-btn" data-hadith-filter="ilal">Critical 'Ilal Case Studies (العلل)</button>
+          </div>
+
+          <div id="hadith-results-container" class="hadith-list">
+            <!-- Populated dynamically by app.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH PILLARS & DEPARTMENTS OF AL-MIZAN AL-HADITH -->
+    <section id="research-pillars" style="background: rgba(12, 22, 18, 0.45); border-top: 1px solid var(--gold-border); border-bottom: 1px solid var(--gold-border);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">🏛 INSTITUTIONAL ARCHITECTURE</span>
+          <h2 class="section-title">Six Research Departments of Al-Mizan Al-Hadith</h2>
+          <p class="section-subtitle">
+            Structured to surpass ordinary Islamic portals by operating as a full-scale academy of textual verification, codicology, and contemporary intellectual engagement.
+          </p>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-number">01 • دار التخريج والعلل</div>
+            <h3 style="font-size:1.35rem; margin-bottom:0.6rem;">Unit of Takhrij & Hidden Defects ('Ilal)</h3>
+            <p style="color:var(--text-secondary); font-size:0.94rem;">
+              Tracing every Prophetic narration across primary Musnads, Sunan, and Ajza' to detect subtle narrator slips (Wahm), Tadlis, and hidden breaks.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-number">02 • خزانة المخطوطات</div>
+            <h3 style="font-size:1.35rem; margin-bottom:0.6rem;">Center for Rare Islamic Manuscripts</h3>
+            <p style="color:var(--text-secondary); font-size:0.94rem;">
+              Digitizing, collating, and critically editing unprinted Hadith and Fiqh manuscripts with full verification of Sama'at (audition registers).
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-number">03 • موسوعة رجال الإسناد</div>
+            <h3 style="font-size:1.35rem; margin-bottom:0.6rem;">Biographical Atlas of Narrators (Rijal)</h3>
+            <p style="color:var(--text-secondary); font-size:0.94rem;">
+              Mapping teacher-student networks, geographical migrations, and chronological layers (Tabaqat) of classical transmitters.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-number">04 • فقه السنة ومقاصدها</div>
+            <h3 style="font-size:1.35rem; margin-bottom:0.6rem;">Department of Fiqh al-Sunnah & Synthesis</h3>
+            <p style="color:var(--text-secondary); font-size:0.94rem;">
+              Harmonizing seemingly conflicting narrations (Mukhtalif al-Hadith) and deriving balanced legal rulings for contemporary global realities.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-number">05 • مركز الرد على الشبهات</div>
+            <h3 style="font-size:1.35rem; margin-bottom:0.6rem;">Epistemology & Defense of Prophetic Sunnah</h3>
+            <p style="color:var(--text-secondary); font-size:0.94rem;">
+              Publishing peer-reviewed responses to historical skepticism, Orientalist critiques, and modern anti-Hadith fallacies in English, Urdu, and Arabic.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-number">06 • دار النشر والترجمة</div>
+            <h3 style="font-size:1.35rem; margin-bottom:0.6rem;">Al-Mizan Multilingual Academic Press</h3>
+            <p style="color:var(--text-secondary); font-size:0.94rem;">
+              Publishing the collected works of Abu Muhammad Khurram Shahzad alongside quarterly research journals and open-access student primers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANUSCRIPTS, PEER-REVIEWED JOURNAL & FATWA/RESEARCH INQUIRY -->
+    <section id="manuscripts-journal">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">📜 SCHOLARLY DISPATCH & SECRETARIAT</span>
+          <h2 class="section-title">Academic Correspondence & Research Requests</h2>
+          <p class="section-subtitle">
+            Direct access to verified research bulletins, critical monographs, and academic correspondence with the office of Researcher Abu Muhammad Khurram Shahzad.
+          </p>
+        </div>
+
+        <div class="books-grid">
+          <div class="pillar-card">
+            <span class="book-badge" style="margin-bottom:0.75rem; display:inline-block;">6-VOLUME ENCYCLOPEDIA</span>
+            <h3 style="font-size:1.35rem; margin-bottom:0.5rem;">Tahqiq & Takhrij of Mishkat al-Masabih (Volumes 1 to 6)</h3>
+            <p style="color:var(--text-secondary); font-size:0.92rem; margin-bottom:1rem;">
+              By <strong>Abu Muhammad Khurram Shahzad</strong> — Complete 6-volume critical grading and chain verification of Mishkat al-Masabih, available above for free PDF download.
+            </p>
+            <a href="#khurram-shahzad-books" class="btn-secondary btn-sm" style="text-decoration:none;">View Volumes in Library ↑</a>
+          </div>
+
+          <div class="pillar-card">
+            <span class="book-badge" style="margin-bottom:0.75rem; display:inline-block;">CRITICAL RIJAL MONOGRAPH</span>
+            <h3 style="font-size:1.35rem; margin-bottom:0.5rem;">Kitab al-Du'afa & Defense of Classical Narrators</h3>
+            <p style="color:var(--text-secondary); font-size:0.92rem; margin-bottom:1rem;">
+              By <strong>Abu Muhammad Khurram Shahzad</strong> — Comprehensive Urdu & Arabic reference works evaluating narrator criticism and defending unjustly weakened transmitters.
+            </p>
+            <a href="#khurram-shahzad-books" class="btn-secondary btn-sm" style="text-decoration:none;">Download Free PDF ↑</a>
+          </div>
+
+          <div class="pillar-card">
+            <span class="book-badge" style="margin-bottom:0.75rem; display:inline-block;">SCHOLARLY INQUIRY DESK</span>
+            <h3 style="font-size:1.35rem; margin-bottom:0.5rem;">Submit a Hadith Verification or Academic Research Request</h3>
+            <p style="color:var(--text-secondary); font-size:0.92rem; margin-bottom:1rem;">
+              Scholars, students, and institutions can request formal Takhrij of specific narrations or contact the secretariat of Al-Mizan Al-Hadith.
+            </p>
+            <a href="mailto:zeroai903@gmail.com?subject=Al-Mizan%20Al-Hadith%20Research%20Inquiry" class="btn-primary btn-sm" style="text-decoration:none;">
+              ✉ Contact Research Secretariat
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- INTERACTIVE ONLINE PDF READER MODAL -->
+  <div class="modal-backdrop" id="book-reader-modal" role="dialog" aria-modal="true">
+    <div class="modal-window" style="max-width: 1020px; padding: 1.75rem;">
+      <button class="modal-close" onclick="closeBookModal()" aria-label="Close Modal">✕</button>
+      <div id="book-modal-body">
+        <!-- Populated dynamically when a book tile is clicked -->
+      </div>
+    </div>
+  </div>
+
+  <!-- PRIVATE OWNER-ONLY ADMIN PORTAL MODAL (Accessible via #admin or Ctrl+Shift+A) -->
+  <div class="modal-backdrop" id="admin-portal-modal" role="dialog" aria-modal="true">
+    <div class="modal-window" style="max-width: 680px;">
+      <button class="modal-close" onclick="closeAdminPortal()" aria-label="Close Admin">✕</button>
+
+      <!-- Step 1: Passcode Lock Screen -->
+      <div id="admin-lock-screen">
+        <div class="section-tag">🔒 RESTRICTED ACCESS • OWNER ONLY</div>
+        <h2 style="font-size:1.75rem; margin-bottom:0.5rem;">Al-Mizan Private Admin Vault</h2>
+        <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:1.5rem;">
+          This portal is strictly restricted to the website owner (<strong>zeroai903@gmail.com</strong>). Public visitors cannot publish books without your authorization passcode and GitHub key.
+        </p>
+
+        <form onsubmit="unlockAdminDashboard(event)">
+          <div class="admin-form-group">
+            <label for="admin-pin-input">Owner Admin Passcode *</label>
+            <input
+              type="password"
+              id="admin-pin-input"
+              class="admin-input"
+              placeholder="Enter owner passcode..."
+              required
+            />
+          </div>
+          <div class="admin-form-group">
+            <label for="admin-gh-token-input">GitHub Personal Access Token (Optional — for instant live commits from browser)</label>
+            <input
+              type="password"
+              id="admin-gh-token-input"
+              class="admin-input"
+              placeholder="ghp_... (Leave blank if asking AI assistant in session)"
+            />
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">
+            🔓 Unlock Admin Upload Portal
+          </button>
+        </form>
+      </div>
+
+      <!-- Step 2: Unlocked Book Upload Dashboard -->
+      <div id="admin-dashboard-screen" style="display:none;">
+        <div class="section-tag">⚡ LIVE REPOSITORY PUBLISHER</div>
+        <h2 style="font-size:1.65rem; margin-bottom:0.35rem;">Upload New Book to Al-Mizan Library</h2>
+        <p style="color:var(--text-secondary); font-size:0.88rem; margin-bottom:1.25rem;">
+          Add a new book via Google Drive PDF link (auto-extracts front page cover thumbnail!) or upload a PDF file directly to your GitHub & Vercel website.
+        </p>
+
+        <form id="admin-add-book-form" onsubmit="handleAdminAddBook(event)">
+          <div class="admin-form-group">
+            <label for="new-book-urdu-title">Book Title (Urdu / Arabic) *</label>
+            <input
+              type="text"
+              id="new-book-urdu-title"
+              class="admin-input"
+              placeholder="e.g. صحیح احادیث کا مجموعہ (الشیخ ابو محمد خرم شہزاد)"
+              dir="rtl"
+              required
+            />
+          </div>
+
+          <div class="admin-form-group">
+            <label for="new-book-en-title">English Subtitle / Transliteration</label>
+            <input
+              type="text"
+              id="new-book-en-title"
+              class="admin-input"
+              placeholder="e.g. Compendium of Authentic Narrations"
+            />
+          </div>
+
+          <div class="admin-form-group">
+            <label for="new-book-category">Category Filter</label>
+            <select id="new-book-category" class="admin-input">
+              <option value="tahqiq">Sahih vs. Da'if Tahqiq (تحقیق روایات)</option>
+              <option value="usul">Usul al-Hadith & Takhrij (اصول حدیث)</option>
+              <option value="mishkat">Tahqiq Mishkat Series (مشکوٰۃ)</option>
+              <option value="rijal">Rijal & Du'afa (اسماء الرجال و ضعفاء)</option>
+              <option value="fiqh">Fiqh & Masail (احکام و مسائل)</option>
+              <option value="sahabah">Sahabah & Ahl al-Bayt (صحابہ و اہل بیت)</option>
+              <option value="adhkar">Adhkar & Du'a (حصن المسلم و اذکار)</option>
+            </select>
+          </div>
+
+          <div class="admin-form-group">
+            <label for="new-book-drive-link">Option A: Paste Google Drive PDF Share Link (Recommended — Auto-Creates Cover Thumbnail)</label>
+            <input
+              type="text"
+              id="new-book-drive-link"
+              class="admin-input"
+              placeholder="https://drive.google.com/file/d/.../view?usp=sharing"
+            />
+          </div>
+
+          <div class="admin-form-group">
+            <label for="new-book-pdf-file">Option B: Or Select PDF File from Computer</label>
+            <input
+              type="file"
+              id="new-book-pdf-file"
+              accept=".pdf"
+              class="admin-input"
+            />
+          </div>
+
+          <div class="admin-form-group">
+            <label for="admin-saved-token">GitHub Token (Required only for direct browser-to-GitHub push)</label>
+            <input
+              type="password"
+              id="admin-saved-token"
+              class="admin-input"
+              placeholder="Paste GitHub token to push directly to live site..."
+            />
+          </div>
+
+          <div id="admin-upload-status" style="display:none; padding:0.85rem; border-radius:8px; background:var(--bg-primary); border:1px solid var(--gold-border); font-size:0.86rem; color:var(--gold-light); margin-bottom:1rem;"></div>
+
+          <div style="display:flex; gap:0.75rem;">
+            <button type="submit" class="btn-primary" style="flex:1; justify-content:center;">
+              🚀 Publish Book to Website
+            </button>
+            <button type="button" class="btn-secondary" onclick="closeAdminPortal()">
+              Done
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-arabic-title" style="font-size:1.85rem; margin-bottom:0.35rem;">الميزان الحديث</div>
+          <div style="font-weight:700; color:var(--text-primary); margin-bottom:0.75rem;">
+            Al-Mizan Al-Hadith Islamic Research Center
+          </div>
+          <p style="color:var(--text-secondary); font-size:0.9rem; max-width:380px; margin-bottom:1rem;">
+            Dedicated to the preservation, verification, and global dissemination of the Prophetic Sunnah and the 37+ scholarly works of <strong>Abu Muhammad Khurram Shahzad</strong>.
+          </p>
+          <div style="font-size:0.85rem; color:var(--gold-primary);">
+            ✉ Official Correspondence: <strong>zeroai903@gmail.com</strong>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="color:var(--gold-primary); margin-bottom:1rem; font-size:1.05rem;">Research Wings</h4>
+          <ul class="footer-links">
+            <li><a href="#khurram-shahzad-books">37+ Free PDF Books Library</a></li>
+            <li><a href="#tahqiq-workbench">Hadith Verification Engine</a></li>
+            <li><a href="#research-pillars">Isnad & Rijal Atlas</a></li>
+            <li><a href="#manuscripts-journal">Manuscript Tahqiq Unit</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color:var(--gold-primary); margin-bottom:1rem; font-size:1.05rem;">Featured PDF Series</h4>
+          <ul class="footer-links">
+            <li><a href="#khurram-shahzad-books">Tahqiq Mishkat al-Masabih (Vol 1–6)</a></li>
+            <li><a href="#khurram-shahzad-books">Usul al-Hadith wa Usul al-Takhrij</a></li>
+            <li><a href="#khurram-shahzad-books">Kitab al-Du'afa & Rijal</a></li>
+            <li><a href="#khurram-shahzad-books">Sahih Hisn al-Muslim</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color:var(--gold-primary); margin-bottom:1rem; font-size:1.05rem;">Scholarly Motto</h4>
+          <div style="font-family:var(--font-arabic); font-size:1.3rem; color:var(--text-primary); line-height:1.7; margin-bottom:0.5rem;" dir="rtl">
+            « نَضَّرَ اللَّهُ امْرَأً سَمِعَ مِنَّا حَدِيثًا فَحَفِظَهُ حَتَّى يُبَلِّغَهُ غَيْرَهُ »
+          </div>
+          <p style="font-size:0.82rem; color:var(--text-secondary);">
+            “May Allah illuminate the person who hears a Hadith from us, memorizes it with precision, and conveys it to others.”
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 1448 AH / 2026 <strong>Al-Mizan Al-Hadith (الميزان الحديث)</strong> • Office of Researcher Abu Muhammad Khurram Shahzad. All Rights Reserved.
+        </div>
+        <div style="display:flex; align-items:center; gap:1rem;">
+          <span>Global Waqf Digital Edition</span>
+          <!-- Clear owner-only Admin button -->
+          <button onclick="openAdminPortal()" class="btn-secondary" style="padding:0.45rem 0.95rem; font-size:0.8rem;" title="Owner Admin Portal (Passcode Protected)">
+            🔒 Admin Portal
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Bottom-Right Owner Admin Lock Button -->
+  <button
+    onclick="openAdminPortal()"
+    title="Owner Admin Portal (Passcode: 9030)"
+    style="position:fixed; bottom:22px; right:22px; z-index:200; background:linear-gradient(135deg, var(--gold-primary), var(--gold-dark)); color:#070d0a; border:1px solid var(--gold-light); border-radius:999px; padding:0.65rem 1.15rem; font-weight:700; font-size:0.84rem; cursor:pointer; box-shadow:0 8px 25px rgba(0,0,0,0.6); display:flex; align-items:center; gap:0.45rem;"
+  >
+    <span>🔒</span>
+    <span>Admin</span>
+  </button>
+
+  <script src="app.js?v=4"></script>
+</body>
+</html>

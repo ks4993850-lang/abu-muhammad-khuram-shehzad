@@ -1,0 +1,1341 @@
+:root {
+  /* Sacred Illuminated Manuscript Dark Theme (Default) */
+  --bg-primary: #070d0a;
+  --bg-secondary: #0c1612;
+  --bg-card: rgba(16, 29, 23, 0.78);
+  --bg-card-hover: rgba(22, 41, 32, 0.92);
+  --bg-glass: rgba(10, 19, 15, 0.85);
+  
+  --text-primary: #f4efe6;
+  --text-secondary: #c2b8a3;
+  --text-muted: #847c6d;
+  
+  --gold-primary: #d4af37;
+  --gold-light: #f3dc8b;
+  --gold-dark: #997a15;
+  --gold-glow: rgba(212, 175, 55, 0.22);
+  --gold-border: rgba(212, 175, 55, 0.28);
+  --gold-border-strong: rgba(212, 175, 55, 0.6);
+  
+  --emerald-accent: #10b981;
+  --emerald-deep: #064e3b;
+  --crimson-accent: #c84b31;
+  
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 25px rgba(212, 175, 55, 0.08);
+  --shadow-gold: 0 8px 30px rgba(212, 175, 55, 0.18);
+  
+  --font-en-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-en-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-arabic: 'Amiri', 'Traditional Arabic', serif;
+  --font-urdu: 'Noto Nastaliq Urdu', 'Amiri', serif;
+  
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="parchment"] {
+  --bg-primary: #fbf8f1;
+  --bg-secondary: #f2ece0;
+  --bg-card: rgba(255, 252, 245, 0.88);
+  --bg-card-hover: rgba(255, 255, 255, 0.98);
+  --bg-glass: rgba(251, 248, 241, 0.88);
+  
+  --text-primary: #15221b;
+  --text-secondary: #3d4a41;
+  --text-muted: #6e7870;
+  
+  --gold-primary: #a67c1e;
+  --gold-light: #c89d32;
+  --gold-dark: #73530a;
+  --gold-glow: rgba(166, 124, 30, 0.12);
+  --gold-border: rgba(166, 124, 30, 0.25);
+  --gold-border-strong: rgba(166, 124, 30, 0.55);
+  
+  --emerald-accent: #047857;
+  --emerald-deep: #d1fae5;
+  
+  --shadow-lg: 0 20px 50px rgba(21, 34, 27, 0.08), 0 0 20px rgba(166, 124, 30, 0.06);
+  --shadow-gold: 0 8px 25px rgba(166, 124, 30, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-en-sans);
+  line-height: 1.65;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  position: relative;
+}
+
+/* Subtle Islamic Geometric SVG Background Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23d4af37' stroke-width='1'%3E%3Cpath d='M40 0L51.7 28.3L80 40L51.7 51.7L40 80L28.3 51.7L0 40L28.3 28.3Z'/%3E%3Ccircle cx='40' cy='40' r='16'/%3E%3Cpath d='M0 0L28.3 28.3M80 0L51.7 28.3M0 80L28.3 51.7M80 80L51.7 51.7'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* RTL & Multilingual Typography Support */
+[dir="rtl"] {
+  font-family: var(--font-urdu);
+}
+
+[lang="ar"], .arabic-text {
+  font-family: var(--font-arabic);
+  line-height: 1.9;
+}
+
+.urdu-text {
+  font-family: var(--font-urdu);
+  line-height: 2.25;
+}
+
+h1, h2, h3, h4, .serif-heading {
+  font-family: var(--font-en-serif);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4 {
+  font-family: var(--font-arabic);
+  letter-spacing: 0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-dark);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-primary);
+}
+
+/* Top Bismillah & Utility Bar */
+.top-sacred-bar {
+  background: linear-gradient(90deg, var(--bg-secondary), rgba(212, 175, 55, 0.1), var(--bg-secondary));
+  border-bottom: 1px solid var(--gold-border);
+  padding: 0.45rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.bismillah-calligraphy {
+  font-family: var(--font-arabic);
+  font-size: 1.15rem;
+  color: var(--gold-primary);
+  letter-spacing: 0.03em;
+}
+
+.top-meta-items {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.hijri-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.15rem 0.65rem;
+  border-radius: 999px;
+  background: var(--gold-glow);
+  border: 1px solid var(--gold-border);
+  color: var(--gold-light);
+  font-size: 0.76rem;
+  font-weight: 500;
+}
+[data-theme="parchment"] .hijri-badge {
+  color: var(--gold-dark);
+}
+
+/* Navigation Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--gold-border);
+  transition: var(--transition);
+}
+
+.nav-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0.9rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.brand-identity {
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.brand-emblem {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: radial-gradient(circle at 30% 30%, rgba(212, 175, 55, 0.25), rgba(6, 78, 59, 0.6));
+  border: 1px solid var(--gold-border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-gold);
+  flex-shrink: 0;
+}
+
+.brand-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-arabic-title {
+  font-family: var(--font-arabic);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  line-height: 1.15;
+}
+
+.brand-sub-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  list-style: none;
+}
+
+.nav-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-secondary);
+  padding: 0.5rem 0.95rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.nav-btn:hover, .nav-btn.active {
+  color: var(--gold-primary);
+  background: var(--gold-glow);
+  border-color: var(--gold-border);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.lang-switcher {
+  display: flex;
+  background: var(--bg-secondary);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-sm);
+  padding: 0.18rem;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lang-btn.active {
+  background: var(--gold-primary);
+  color: #070d0a;
+}
+
+.icon-btn {
+  background: var(--bg-secondary);
+  border: 1px solid var(--gold-border);
+  color: var(--gold-primary);
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.icon-btn:hover {
+  border-color: var(--gold-primary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-gold);
+}
+
+/* Main Layout & Container */
+.container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 5rem 0;
+  position: relative;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 5.5rem 0 4.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-glow {
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 850px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.14) 0%, rgba(16, 185, 129, 0.06) 45%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.95fr;
+  gap: 3.5rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  background: var(--gold-glow);
+  border: 1px solid var(--gold-border);
+  color: var(--gold-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.hero-arabic-banner {
+  font-family: var(--font-arabic);
+  font-size: clamp(2.4rem, 4.5vw, 4rem);
+  color: var(--gold-primary);
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 4px 25px rgba(212, 175, 55, 0.25);
+}
+
+.hero-title {
+  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  color: var(--text-primary);
+}
+
+.hero-title span {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin-bottom: 2.2rem;
+}
+
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.75rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+  color: #070d0a;
+  font-weight: 700;
+  padding: 0.9rem 1.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--gold-light);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  text-decoration: none;
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  box-shadow: 0 12px 35px rgba(212, 175, 55, 0.32);
+}
+
+.btn-secondary {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-weight: 600;
+  padding: 0.9rem 1.65rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--gold-border-strong);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: var(--gold-glow);
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--gold-border);
+}
+
+.stat-item h4 {
+  font-size: 1.75rem;
+  color: var(--gold-primary);
+  font-family: var(--font-en-serif);
+  line-height: 1.1;
+}
+
+.stat-item p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+/* Mihrab Spotlight Card in Hero */
+.mihrab-card {
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border-strong);
+  border-radius: 180px 180px 20px 20px;
+  padding: 3rem 2.25rem 2.25rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  text-align: center;
+  backdrop-filter: blur(16px);
+}
+
+.mihrab-card::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px dashed var(--gold-border);
+  border-radius: 172px 172px 14px 14px;
+  pointer-events: none;
+}
+
+.mihrab-ornament {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.25rem;
+  border-radius: 50%;
+  background: var(--gold-glow);
+  border: 1px solid var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-primary);
+}
+
+.mihrab-arabic-verse {
+  font-family: var(--font-arabic);
+  font-size: 1.65rem;
+  color: var(--gold-light);
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+[data-theme="parchment"] .mihrab-arabic-verse {
+  color: var(--gold-dark);
+}
+
+.mihrab-quote {
+  font-family: var(--font-en-serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+}
+
+.mihrab-scholar-badge {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--gold-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  text-align: left;
+}
+[dir="rtl"] .mihrab-scholar-badge {
+  text-align: right;
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 3.5rem;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--gold-primary);
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  color: var(--text-primary);
+  margin-bottom: 0.85rem;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.02rem;
+}
+
+/* Interactive Tahqiq (Hadith Verification & Balance Workbench) */
+.workbench-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border-strong);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 2rem;
+}
+
+.search-controls-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 100%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--gold-border);
+  color: var(--text-primary);
+  padding: 1rem 1.25rem 1rem 3rem;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: var(--transition);
+}
+[dir="rtl"] .search-input {
+  padding: 1rem 3rem 1rem 1.25rem;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 0 3px var(--gold-glow);
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--gold-primary);
+  pointer-events: none;
+}
+[dir="rtl"] .search-icon {
+  left: auto;
+  right: 1rem;
+}
+
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 1.75rem;
+}
+
+.pill-btn {
+  background: var(--bg-secondary);
+  border: 1px solid var(--gold-border);
+  color: var(--text-secondary);
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-size: 0.83rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.pill-btn:hover, .pill-btn.active {
+  background: var(--gold-primary);
+  color: #070d0a;
+  border-color: var(--gold-primary);
+}
+
+/* Hadith Research Cards */
+.hadith-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hadith-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-md);
+  padding: 1.85rem;
+  transition: var(--transition);
+  position: relative;
+}
+
+.hadith-card:hover {
+  border-color: var(--gold-primary);
+  box-shadow: var(--shadow-gold);
+}
+
+.hadith-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--gold-border);
+}
+
+.hadith-source-tag {
+  font-weight: 700;
+  color: var(--gold-primary);
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hukm-badge {
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hukm-sahih {
+  background: rgba(16, 185, 129, 0.16);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+[data-theme="parchment"] .hukm-sahih {
+  color: #047857;
+}
+
+.hukm-hasan {
+  background: rgba(212, 175, 55, 0.18);
+  color: var(--gold-light);
+  border: 1px solid var(--gold-border-strong);
+}
+[data-theme="parchment"] .hukm-hasan {
+  color: var(--gold-dark);
+}
+
+.hukm-critical {
+  background: rgba(200, 75, 49, 0.18);
+  color: #f87171;
+  border: 1px solid rgba(200, 75, 49, 0.4);
+}
+
+.hadith-arabic {
+  font-family: var(--font-arabic);
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  text-align: right;
+  direction: rtl;
+  margin-bottom: 1.15rem;
+  line-height: 1.95;
+  padding: 1rem 1.25rem;
+  background: rgba(212, 175, 55, 0.04);
+  border-right: 3px solid var(--gold-primary);
+  border-radius: 8px;
+}
+
+.hadith-urdu {
+  font-family: var(--font-urdu);
+  font-size: 1.05rem;
+  color: var(--gold-light);
+  text-align: right;
+  direction: rtl;
+  margin-bottom: 0.9rem;
+}
+[data-theme="parchment"] .hadith-urdu {
+  color: var(--gold-dark);
+}
+
+.hadith-english {
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+}
+
+/* Isnad Chain Visualizer */
+.isnad-chain-box {
+  background: var(--bg-primary);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  margin-top: 1rem;
+}
+
+.isnad-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold-primary);
+  margin-bottom: 0.65rem;
+  font-weight: 700;
+}
+
+.isnad-nodes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.narrator-node {
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.narrator-grade {
+  font-size: 0.7rem;
+  color: var(--emerald-accent);
+  font-weight: 700;
+}
+
+.chain-arrow {
+  color: var(--gold-primary);
+  font-size: 0.85rem;
+}
+
+/* Scholar Profile & Books Section (Abu Muhammad Khurram Shahzad) */
+.scholar-spotlight-banner {
+  background: linear-gradient(135deg, rgba(16, 29, 23, 0.95), rgba(6, 78, 59, 0.35));
+  border: 1px solid var(--gold-border-strong);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+[data-theme="parchment"] .scholar-spotlight-banner {
+  background: linear-gradient(135deg, #f7f1e3, #e6dec8);
+}
+
+.scholar-monogram {
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.25), rgba(7, 13, 10, 0.9));
+  border: 2px solid var(--gold-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-gold);
+  text-align: center;
+  padding: 1rem;
+}
+
+.scholar-monogram-ar {
+  font-family: var(--font-arabic);
+  font-size: 1.55rem;
+  color: var(--gold-primary);
+  line-height: 1.2;
+}
+
+.scholar-meta-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0 1.25rem;
+}
+
+.scholar-tag {
+  background: var(--gold-glow);
+  border: 1px solid var(--gold-border);
+  color: var(--gold-light);
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+[data-theme="parchment"] .scholar-tag {
+  color: var(--gold-dark);
+}
+
+/* Books Grid (3D Illuminated Book Covers) */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+.book-card {
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.book-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold-primary);
+  box-shadow: var(--shadow-lg);
+}
+
+.book-cover-visual {
+  height: 220px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  border: 1px solid var(--gold-border-strong);
+  background: linear-gradient(145deg, #0d1f18 0%, #07110d 100%);
+  box-shadow: inset 0 0 30px rgba(212, 175, 55, 0.12), 0 10px 25px rgba(0, 0, 0, 0.45);
+}
+
+.book-cover-visual::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(212, 175, 55, 0.35);
+}
+
+.book-cover-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.72rem;
+  color: var(--gold-primary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-left: 0.75rem;
+}
+
+.book-cover-arabic {
+  font-family: var(--font-arabic);
+  font-size: 1.65rem;
+  color: var(--gold-light);
+  text-align: center;
+  line-height: 1.4;
+  margin: auto 0;
+  text-shadow: 0 2px 12px rgba(212, 175, 55, 0.3);
+}
+
+.book-cover-author {
+  font-size: 0.78rem;
+  color: #c2b8a3;
+  text-align: center;
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+  padding-top: 0.55rem;
+}
+
+.book-meta-row {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.book-badge {
+  font-size: 0.74rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 4px;
+  background: var(--gold-glow);
+  color: var(--gold-primary);
+  border: 1px solid var(--gold-border);
+  font-weight: 600;
+}
+
+.book-title {
+  font-size: 1.35rem;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.book-urdu-title {
+  font-family: var(--font-urdu);
+  font-size: 1.05rem;
+  color: var(--gold-primary);
+  margin-bottom: 0.85rem;
+  direction: rtl;
+  text-align: right;
+}
+
+.book-synopsis {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.book-actions {
+  display: flex;
+  gap: 0.65rem;
+  margin-top: auto;
+}
+
+.btn-sm {
+  flex: 1;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.84rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  transition: var(--transition);
+}
+
+/* Research Pillars & Departments */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.75rem;
+}
+
+.pillar-card {
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  transition: var(--transition);
+}
+
+.pillar-card:hover {
+  border-color: var(--gold-primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-gold);
+}
+
+.pillar-number {
+  font-family: var(--font-en-serif);
+  font-size: 2.2rem;
+  color: var(--gold-primary);
+  opacity: 0.8;
+  margin-bottom: 0.75rem;
+}
+
+/* Interactive Modal (Book Reader & Citation Exporter) */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 8, 6, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 250;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.modal-backdrop.open {
+  display: flex;
+}
+
+.modal-window {
+  background: var(--bg-secondary);
+  border: 1px solid var(--gold-primary);
+  border-radius: var(--radius-lg);
+  max-width: 880px;
+  width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+  padding: 2.5rem;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  color: var(--text-primary);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.chapter-preview-box {
+  background: var(--bg-primary);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  margin: 1.5rem 0;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--gold-border-strong);
+  padding: 4.5rem 0 2.5rem;
+  margin-top: 4rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.92rem;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--gold-primary);
+}
+
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid var(--gold-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .scholar-spotlight-banner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .scholar-monogram {
+    margin: 0 auto;
+  }
+  .scholar-meta-tags {
+    justify-content: center;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-sacred-bar {
+    flex-direction: column;
+    gap: 0.35rem;
+    text-align: center;
+  }
+  .nav-container {
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 0.35rem;
+  }
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .search-controls-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ==========================================================================
+   37 REAL PDF BOOKS TILE GALLERY (FRONT COVER THUMBNAILS)
+   ========================================================================== */
+.books-tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.75rem;
+}
+
+.book-tile-card {
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.book-tile-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--gold-primary);
+  box-shadow: var(--shadow-lg);
+}
+
+.book-tile-thumb-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4.1;
+  background: #050a08;
+  overflow: hidden;
+  border-bottom: 1px solid var(--gold-border-strong);
+  cursor: pointer;
+}
+
+.book-tile-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s ease;
+}
+
+.book-tile-card:hover .book-tile-thumb-img {
+  transform: scale(1.04);
+}
+
+.book-tile-free-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(7, 13, 10, 0.88);
+  border: 1px solid var(--gold-primary);
+  color: var(--gold-light);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+}
+
+.book-tile-body {
+  padding: 0.95rem 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.book-tile-clean-name {
+  font-family: var(--font-urdu), var(--font-en-sans);
+  font-size: 1.05rem;
+  color: var(--gold-light);
+  text-align: center;
+  line-height: 1.85;
+  margin: 0;
+  font-weight: 700;
+}
+[data-theme="parchment"] .book-tile-clean-name {
+  color: var(--gold-dark);
+}
+
+.book-tile-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.55rem;
+}
+
+.btn-tile-download {
+  background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+  color: #070d0a;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.6rem 0.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid var(--gold-light);
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+.btn-tile-download:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.btn-tile-read {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 0.6rem 0.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--gold-border-strong);
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+.btn-tile-read:hover {
+  background: var(--gold-glow);
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+}
+
+/* ==========================================================================
+   PRIVATE ADMIN PORTAL MODAL & FORM STYLES
+   ========================================================================== */
+.admin-form-group {
+  margin-bottom: 1.1rem;
+}
+
+.admin-form-group label {
+  display: block;
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--gold-primary);
+  margin-bottom: 0.4rem;
+}
+
+.admin-input {
+  width: 100%;
+  background: var(--bg-primary);
+  border: 1px solid var(--gold-border-strong);
+  color: var(--text-primary);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-family: inherit;
+}
+
+.admin-input:focus {
+  outline: none;
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 0 3px var(--gold-glow);
+}
