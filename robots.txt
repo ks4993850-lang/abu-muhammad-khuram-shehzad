@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abu-muhammad-khuram-shehzad.vercel.app/sitemap.xml
